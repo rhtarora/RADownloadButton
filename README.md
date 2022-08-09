@@ -21,7 +21,7 @@
     </a>
 </p>
 
-**AHDownloadButton** is a customizable download button similar to the download button in the latest version of Apple's App Store app (since iOS 11).
+**RADownloadButton** is a customizable download button similar to the download button in the latest version of Apple's App Store app (since iOS 11).
 It features download progress animation as well as animated transitions between download states: start download, pending, downloading and downloaded. [You can find more details about the implementation on my blog](https://amerhukic.com/replicating-app-store-download-button).
 
 <p align="center"><img src="https://raw.githubusercontent.com/amerhukic/AHDownloadButton/master/Demo.gif"/>
@@ -36,9 +36,9 @@ It features download progress animation as well as animated transitions between 
 ## Usage
 
 ### Code
-To use `AHDownloadButton` in code, you simply create a new instance and add it as a subview to your desired view:
+To use `RADownloadButton` in code, you simply create a new instance and add it as a subview to your desired view:
 ```swift
-  let downloadButton = AHDownloadButton()
+  let downloadButton = RADownloadButton()
   downloadButton.frame = CGRect(origin: origin, size: size)
   view.addSubview(downloadButton)
 ```
@@ -54,7 +54,7 @@ The state of the button can be changed through its `state` property.
 You can use the `AHDownloadButtonDelegate` to monitor taps on the button and update button's state if needed. To update the current download progress, use the `progress` property. Here is an example how it could be implemented:  
 
 ```swift
-extension DownloadViewController: AHDownloadButtonDelegate {
+extension DownloadViewController: RADownloadButtonDelegate {
 
     func downloadButton(_ downloadButton: AHDownloadButton, tappedWithState state: AHDownloadButton.State)
         switch state {
